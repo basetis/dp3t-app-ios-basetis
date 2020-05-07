@@ -49,29 +49,37 @@ class TracingManager: NSObject {
                                                    reportBaseUrl: reportBaseUrl,
                                                    jwtPublicKey: Environment.current.jwtPublicKey)
 
-            #if ENABLE_TESTING
-                switch Environment.current {
-                case .dev:
-                    // 5min Batch lenght on dev Enviroment
-                    DP3TTracing.parameters.networking.batchLength = 5 * 60
-                    var appVersion = "N/A"
-                    if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String,
-                        let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
-                        appVersion = "\(version)(\(build))"
+
+
+            if #available(iOS 13.4, *) {
+                try DP3TTracing.initialize(with: .manual(descriptor),
+                                           urlSession: URLSession.certificatePinned,
+                                           mode: .exposureNotificationFramework)
+            } else {
+                #if ENABLE_TESTING
+                    switch Environment.current {
+                    case .dev:
+                        // 5min Batch lenght on dev Enviroment
+                        DP3TTracing.parameters.networking.batchLength = 5 * 60
+                        var appVersion = "N/A"
+                        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String,
+                            let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
+                            appVersion = "\(version)(\(build))"
+                        }
+                        try DP3TTracing.initialize(with: .manual(descriptor),
+                                                   urlSession: URLSession.certificatePinned,
+                                                   mode: .customImplementationCalibration(identifierPrefix: "", appVersion: appVersion))
+                    case .abnahme:
+                        try DP3TTracing.initialize(with: .manual(descriptor),
+                                                   urlSession: URLSession.certificatePinned)
+                    case .prod:
+                        try DP3TTracing.initialize(with: .manual(descriptor),
+                                                   urlSession: URLSession.certificatePinned)
                     }
-                    try DP3TTracing.initialize(with: .manual(descriptor),
-                                               urlSession: URLSession.certificatePinned,
-                                               mode: .calibration(identifierPrefix: "", appVersion: appVersion))
-                case .abnahme:
-                    try DP3TTracing.initialize(with: .manual(descriptor),
-                                               urlSession: URLSession.certificatePinned)
-                case .prod:
-                    try DP3TTracing.initialize(with: .manual(descriptor),
-                                               urlSession: URLSession.certificatePinned)
-                }
-            #else
-                try DP3TTracing.initialize(with: .manual(descriptor))
-            #endif
+                #else
+                    try DP3TTracing.initialize(with: .manual(descriptor))
+                #endif
+            }
         } catch {
             UIStateManager.shared.tracingStartError = error
         }

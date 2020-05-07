@@ -32,8 +32,8 @@
         "package": "DP3TSDK",
         "repositoryURL": "https://github.com/DP-3T/dp3t-sdk-ios.git",
         "state": {
-          "branch": "develop",
-          "revision": "41bc058fa82956cb82a99dac640d04776d670572",
+          "branch": "feature/exposure-notification-framework",
+          "revision": "6587de08d3706cdaab6c00e900fe86799c751de3",
           "version": null
         }
       },

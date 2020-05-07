@@ -83,16 +83,18 @@ class UIStateLogic {
                 tracing = .bluetoothPermissionError
             case .cryptographyError(_), .databaseError:
                 tracing = .unexpectedError
-                case .coreBluetoothError:
-                    tracing = .unexpectedError
+            case .coreBluetoothError:
+                tracing = .unexpectedError
+            case .exposureNotificationError(error: _):
+                tracing = .unexpectedError
             case .networkingError, .caseSynchronizationError, .userAlreadyMarkedAsInfected:
                 // TODO: Something
                 break // networkingError should already be handled elsewhere, ignore caseSynchronizationError for now
             }
-            #if ENABLE_TESTING
-        case .activeReceiving, .activeAdvertising:
-            assertionFailure("These states should never be set in production")
-            #endif
+           // #if ENABLE_TESTING
+        //case .activeReceiving, .activeAdvertising:
+          //  assertionFailure("These states should never be set in production")
+           // #endif
         case .stopped:
             tracing = .tracingDisabled
         case .active:
