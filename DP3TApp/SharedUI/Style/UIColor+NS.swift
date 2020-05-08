@@ -28,4 +28,9 @@ extension UIColor {
 
     // text color
     public static var ns_text_secondary = UIColor(ub_hexString: "#e6e6e6")!
+    
+    
+    // MARK: - Custom colors
+    public static var customPrimaryColor = UIColor(ub_hexString: "#9839ff")!
+    
 }

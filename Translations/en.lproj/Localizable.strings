@@ -259,7 +259,7 @@
 "bluetooth_permission_error_text" = "Enable the use of Bluetooth so that anonymous tracing works.";
 
 /*URL zum Corona Check*/
-"symptom_detail_corona_check_url" = "https://check.bag-coronavirus.ch/screening";
+"symptom_detail_corona_check_url" = "https://canalsalut.gencat.cat/ca/salut-a-z/c/coronavirus-2019-ncov/ciutadania/que-es-coronavirus/simptomes-i-tractament/";
 "push_open_settings_button" = "Change settings";
 
 /*Meldungen Detail: Subtitel wenn keine Meldungen*/
@@ -339,7 +339,7 @@
 "meldungen_detail_guard_others" = "Protect other people";
 
 /*Meldungen Detail: Weisse Box Text*/
-"meldungen_detail_guard_text" = "If you have any questions:\nInfoline Coronavirus\n+41 58 387 77 78";
+"meldungen_detail_guard_text" = "If you have any questions:+34 93 250 24 22";
 
 /*Meldungen Detail Button Weisse Box*/
 "meldungen_detail_call_again_button" = "Call again";
@@ -348,7 +348,7 @@
 "meldungen_detail_call_last_call" = "Last call: (DATE)";
 
 /*Subtitel im Onboarding erste Seite*/
-"app_subtitle" = "Subtitle";
+"app_subtitle" = "Staying one step ahead of the virus";
 
 /*Onboarding: Titel oben*/
 "onboarding_prinzip_heading" = "The aim";
@@ -516,7 +516,7 @@
 "inform_code_invalid_title" = "Code invalid";
 
 /*Fehlermeldung Subtitle ungültiger Code*/
-"inform_code_invalid_subtitle" = "If you have any questions: App-Hotline\n+41 58 466 07 99";
+"inform_code_invalid_subtitle" = "If you have any questions: +34 93 250 24 22";
 
 /*Datum: Vor 1 Tag*/
 "date_one_day_ago" = "1 day ago";
@@ -696,7 +696,7 @@
 "meldungen_explanation_link_title" = "Instructions on self-quarantine";
 
 /*Meldungen: Meldung Weisse Box Link URL*/
-"meldungen_explanation_link_url" = "https://www.bag.admin.ch/bag/en/home/krankheiten/ausbrueche-epidemien-pandemien/aktuelle-ausbrueche-epidemien/novel-cov/selbst-isolierung-und-selbst-quarantaene.html";
+"meldungen_explanation_link_url" = "https://canalsalut.gencat.cat/ca/salut-a-z/c/coronavirus-2019-ncov/ciutadania/confinament/";
 
 /*Meldungen: Meldungen FAQ*/
 "meldungen_meldungen_faq1_title" = "Do I have to call?";
@@ -726,7 +726,7 @@
 "no_meldungen_box_link" = "This way, we protect ourselves";
 
 /*Keine Meldungen Weisse Box Link URL*/
-"no_meldungen_box_url" = "https://www.bag-coronavirus.ch";
+"no_meldungen_box_url" = "https://canalsalut.gencat.cat/ca/salut-a-z/c/coronavirus-2019-ncov/ciutadania/confinament/";
 
 /*Informieren Detail: FAQ Titel*/
 "inform_detail_faq1_title" = "What is a Covidcode?";
@@ -747,10 +747,10 @@
 "inform_send_endtracing_text" = "Following a positive text, tracing is automatically ended.";
 
 /*Telefonnummer der Infoline*/
-"infoline_tel_number" = "+41 58 387 77 78";
+"infoline_tel_number" = "+34 93 250 24 22";
 
 /*URL für Häufige Fragen Button*/
-"faq_button_url" = "https://www.bag.admin.ch/bag/en/home/krankheiten/ausbrueche-epidemien-pandemien/aktuelle-ausbrueche-epidemien/novel-cov/haeufig-gestellte-fragen.html";
+"faq_button_url" = "https://web.gencat.cat/ca/coronavirus/preguntes-mes-frequents/";
 
 /*Informieren Flow: Titel erster Screen*/
 "inform_code_intro_title" = "Important information";
@@ -774,7 +774,7 @@
 "meldungen_positive_tested_faq1_text" = "Following a positive text, tracing in the app is automatically ended.";
 
 /*Sprache Abkürzung (BITTE NICHT ÄNDERN)*/
-"language_key" = "de";
+"language_key" = "en";
 
 /*Meldungen Homescreen: Name Hotline*/
 "exposed_info_contact_hotline_name" = "Coronavirus infoline";
@@ -790,3 +790,6 @@
 
 /*Accessibility Talk back information for android back button in toolbar*/
 "android_accessibility_back_button" = "Back";
+
+
+"change_language" = "Select language";

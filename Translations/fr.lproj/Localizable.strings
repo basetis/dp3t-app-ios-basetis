@@ -348,7 +348,7 @@
 "meldungen_detail_call_last_call" = "Dernier appel : {DATE}";
 
 /*Subtitel im Onboarding erste Seite*/
-"app_subtitle" = "Subtitle";
+"app_subtitle" = "Gardons une longueur d'avance sur le virus";
 
 /*Onboarding: Titel oben*/
 "onboarding_prinzip_heading" = "Le but :";

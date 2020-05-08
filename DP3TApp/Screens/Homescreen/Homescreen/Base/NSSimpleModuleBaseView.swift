@@ -22,6 +22,8 @@ class NSSimpleModuleBaseView: UIView {
     private let subview: UIView?
 
     private let sideInset: CGFloat
+    
+    private var isSelected: Bool = false
 
     // MARK: - Public
 
@@ -29,7 +31,7 @@ class NSSimpleModuleBaseView: UIView {
 
     // MARK: - Init
 
-    init(title: String, subtitle: String? = nil, subview: UIView? = nil, boldText: String? = nil, text: String? = nil, image: UIImage? = nil, subtitleColor: UIColor? = nil) {
+    init(title: String, subtitle: String? = nil, subview: UIView? = nil, boldText: String? = nil, text: String? = nil, image: UIImage? = nil, subtitleColor: UIColor? = nil, isSelected: Bool = false) {
         sideInset = NSPadding.large
         self.subview = subview
 
@@ -42,10 +44,12 @@ class NSSimpleModuleBaseView: UIView {
             subtitleLabel.textColor = c
         }
 
+        self.title = title
         titleLabel.text = title
         boldTextLabel.text = boldText
         textLabel.text = text
         imageView.image = image
+        self.isSelected = isSelected
 
         setup()
     }
@@ -63,6 +67,8 @@ class NSSimpleModuleBaseView: UIView {
         addSubview(titleLabel)
         addSubview(contentView)
 
+        titleLabel.textColor = (isSelected ? UIColor.customPrimaryColor : .ns_text)
+        
         let topInset = NSPadding.medium + NSPadding.small
 
         if subtitleLabel.text == nil {
@@ -136,22 +142,37 @@ class NSSimpleModuleBaseView: UIView {
 
             lastView = view
         }
-
-        contentView.snp.makeConstraints { make in
-            make.top.equalTo(lastView.snp.bottom).offset(NSPadding.small)
-            make.left.right.equalToSuperview().inset(sideInset)
-            /*
-            make.left.equalToSuperview().inset(sideInset)
-            if imageView.superview != nil {
-                make.right.equalTo(imageView.snp.left).offset(-sideInset)
+        
+        if lastView == titleLabel {
+            titleLabel.snp.makeConstraints { make in
+                make.bottom.equalToSuperview().inset(topInset)
             }
-            else {
-                make.right.equalToSuperview().offset(-sideInset)
+            
+        } else {
+            
+            contentView.snp.makeConstraints { make in
+                make.top.equalTo(lastView.snp.bottom).offset(NSPadding.small)
+                make.left.right.equalToSuperview().inset(sideInset)
+                /*
+                 make.left.equalToSuperview().inset(sideInset)
+                 if imageView.superview != nil {
+                 make.right.equalTo(imageView.snp.left).offset(-sideInset)
+                 }
+                 else {
+                 make.right.equalToSuperview().offset(-sideInset)
+                 }
+                 */
+                make.bottom.equalToSuperview().inset(sideInset)
             }
-             */
-            make.bottom.equalToSuperview().inset(sideInset)
         }
 
         contentView.axis = .vertical
+    }
+    
+    func setSelected(_ selected: Bool) {
+         
+        self.isSelected = selected
+        titleLabel.textColor = (selected ? UIColor.customPrimaryColor : .ns_text)
+        
     }
 }

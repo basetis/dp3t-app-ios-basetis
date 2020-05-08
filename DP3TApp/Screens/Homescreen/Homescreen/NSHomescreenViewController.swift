@@ -78,11 +78,19 @@ class NSHomescreenViewController: NSTitleViewScrollViewController {
             self.finishTransition?()
             self.finishTransition = nil
         }
+        
+        NotificationCenter.default.addObserver(forName: Notification.Name("languageChangeNotification"),
+                                               object: nil,
+                                               queue: .main) { [weak self] _ in
+                                                self?.localizeUI()
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        presentOnboardingIfNeeded()
+        
         appTitleView.changeBackgroundRandomly()
         UIStateManager.shared.refresh()
 
@@ -109,7 +117,6 @@ class NSHomescreenViewController: NSTitleViewScrollViewController {
         finishTransition?()
         finishTransition = nil
 
-        presentOnboardingIfNeeded()
     }
 
     private var finishTransition: (() -> Void)?
@@ -118,10 +125,19 @@ class NSHomescreenViewController: NSTitleViewScrollViewController {
 
     private func setupLayout() {
         // navigation bar
-        let image = UIImage(named: "ic-info-outline")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, landscapeImagePhone: image, style: .plain, target: self, action: #selector(infoButtonPressed))
-        navigationItem.rightBarButtonItem?.tintColor = .ns_blue
-        navigationItem.rightBarButtonItem?.accessibilityLabel = "accessibility_info_button".ub_localized
+        let infoImage = UIImage(named: "ic-info-outline")
+        let languageImage = UIImage(named: "ic-language")
+        
+        let infoItem = UIBarButtonItem(image: infoImage, landscapeImagePhone: infoImage, style: .plain, target: self, action: #selector(infoButtonPressed))
+        let languageItem = UIBarButtonItem(image: languageImage, landscapeImagePhone: languageImage, style: .plain, target: self, action: #selector(languageButtonPressed))
+        
+        infoItem.tintColor = .customPrimaryColor
+        infoItem.accessibilityLabel = "accessibility_info_button".ub_localized
+        
+        languageItem.tintColor = .customPrimaryColor
+        languageItem.accessibilityLabel = "accessibility_changeLanguage_button".ub_localized
+        
+        navigationItem.rightBarButtonItems = [languageItem, infoItem]
 
         // other views
         stackScrollView.addArrangedView(infoBoxView)
@@ -222,6 +238,23 @@ class NSHomescreenViewController: NSTitleViewScrollViewController {
             #endif
         }
     }
+    
+    func localizeUI() {
+        
+        title = "app_name".ub_localized
+        
+        handshakesModuleView.localizeUI()
+        meldungView.localizeUI()
+        
+        whatToDoSymptomsButton.titleString = "whattodo_title_symptoms".ub_localized
+        whatToDoSymptomsButton.subtitleString = "whattodo_subtitle_symptoms".ub_localized
+        
+        whatToDoPositiveTestButton.titleString = "whattodo_title_positivetest".ub_localized
+        whatToDoPositiveTestButton.subtitleString = "whattodo_subtitle_positivetest".ub_localized
+        
+        view.layoutSubviews()
+                
+    }
 
     func updateState(_ state: UIStateModel) {
         appTitleView.uiState = state.homescreen.header
@@ -272,6 +305,10 @@ class NSHomescreenViewController: NSTitleViewScrollViewController {
 
     @objc private func infoButtonPressed() {
         present(NSNavigationController(rootViewController: NSAboutViewController()), animated: true)
+    }
+    
+    @objc private func languageButtonPressed() {
+        present(NSNavigationController(rootViewController: ChangeLanguageViewController()), animated: true)
     }
 
     private let uploadDBButton = NSButton(title: "Upload DB to server", style: .outlineUppercase(.ns_red))

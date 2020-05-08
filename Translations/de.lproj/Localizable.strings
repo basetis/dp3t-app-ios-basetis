@@ -342,7 +342,7 @@
 "meldungen_detail_guard_others" = "Schützen Sie andere";
 
 /*Meldungen Detail: Weisse Box Text*/
-"meldungen_detail_guard_text" = "Bei Rückfragen:\nInfoline Coronavirus\n+41 58 387 77 78";
+"meldungen_detail_guard_text" = "Bei Rückfragen:\n+34 93 250 24 22";
 
 /*Meldungen Detail Button Weisse Box*/
 "meldungen_detail_call_again_button" = "Erneut anrufen";
@@ -352,7 +352,7 @@
 
 /*CFL: Platzhalter-Text Onboarding – ev. später obsolet*/
 /*Subtitel im Onboarding erste Seite*/
-"app_subtitle" = "Untertitel";
+"app_subtitle" = "Dem Virus einen Schritt voraus";
 
 /*Onboarding: Titel oben*/
 "onboarding_prinzip_heading" = "Das Ziel";
@@ -521,7 +521,7 @@
 "inform_code_invalid_title" = "Code ungültig";
 
 /*Fehlermeldung Subtitle ungültiger Code*/
-"inform_code_invalid_subtitle" = "Bei Fragen: App-Hotline\n+41 58 466 07 99";
+"inform_code_invalid_subtitle" = "Bei Fragen: \n +34 93 250 24 22";
 
 /*Datum: Vor 1 Tag*/
 "date_one_day_ago" = "vor 1 Tag";
@@ -754,7 +754,7 @@
 "inform_send_endtracing_text" = "Nach einem positiven Test wird das Tracing automatisch beendet.";
 
 /*Telefonnummer der Infoline*/
-"infoline_tel_number" = "+41 58 387 77 78";
+"infoline_tel_number" = "+34 93 250 24 22";
 
 /*URL für Häufige Fragen Button*/
 "faq_button_url" = "https://www.bag.admin.ch/bag/de/home/krankheiten/ausbrueche-epidemien-pandemien/aktuelle-ausbrueche-epidemien/novel-cov/haeufig-gestellte-fragen.html";

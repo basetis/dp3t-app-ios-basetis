@@ -51,4 +51,16 @@ class NSBegegnungenModuleView: NSModuleBaseView {
         isEnabled = uiState != .tracingEnded
         stackView.layoutIfNeeded()
     }
+    
+    func localizeUI() {
+        
+        headerTitle = "handshakes_title_homescreen".ub_localized
+        
+        tracingActiveView.updateTexts(title: "tracing_active_title".ub_localized, subText: "tracing_active_text".ub_localized, additionalText: nil, additionalURL: nil)
+        
+        tracingEndedView.updateTexts(title: "tracing_ended_title".ub_localized, subText: "tracing_ended_text".ub_localized, additionalText: nil, additionalURL: nil)
+        
+        setNeedsLayout()
+        layoutIfNeeded()
+    }
 }

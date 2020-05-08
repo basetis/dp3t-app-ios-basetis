@@ -9,6 +9,19 @@ import UIKit
 class NSWhatToDoButton: UBButton {
     // MARK: - Views
 
+    public var titleString: String? {
+        didSet{
+            titleTextLabel.text = titleString
+        }
+    }
+    
+    public var subtitleString: String? {
+        didSet{
+            subtitleLabel.text = subtitleString
+        }
+    }
+
+    
     private let titleTextLabel = NSLabel(.textBold)
     private let subtitleLabel = NSLabel(.textLight)
 

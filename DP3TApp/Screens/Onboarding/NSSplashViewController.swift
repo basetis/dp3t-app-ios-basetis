@@ -18,19 +18,19 @@ class NSSplashViewController: UIViewController {
         let subtitle = NSLabel(.textLight, textAlignment: .center)
         subtitle.text = "app_subtitle".ub_localized
 
-        let imgView = UIImageView(image: UIImage(named: "bag-logo"))
+//        let imgView = UIImageView(image: UIImage(named: "basetis-logo-big"))
 
         view.addSubview(title)
         view.addSubview(subtitle)
-        view.addSubview(imgView)
+//        view.addSubview(imgView)
 
-        imgView.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.bottom.equalTo(self.view.safeAreaLayoutGuide).inset(NSPadding.large).priority(.low)
-            make.bottom.lessThanOrEqualTo(self.view.snp.bottom).inset(NSPadding.large)
-        }
-
-        imgView.ub_setContentPriorityRequired()
+//        imgView.snp.makeConstraints { make in
+//            make.centerX.equalToSuperview()
+//            make.bottom.equalTo(self.view.safeAreaLayoutGuide).inset(NSPadding.large).priority(.low)
+//            make.bottom.lessThanOrEqualTo(self.view.snp.bottom).inset(NSPadding.large)
+//        }
+//
+//        imgView.ub_setContentPriorityRequired()
 
         title.snp.makeConstraints { make in
             make.left.right.equalToSuperview().inset(NSPadding.large)

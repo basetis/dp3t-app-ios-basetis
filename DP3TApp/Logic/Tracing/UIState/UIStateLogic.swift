@@ -129,15 +129,13 @@ class UIStateLogic {
     private func setInfoBoxState(_ newState: inout UIStateModel) {
         if let localizedInfoBox = ConfigManager.currentConfig?.infoBox {
             let infoBox: ConfigResponseBody.LocalizedInfobox.InfoBox
-            switch Language.current {
+            switch Language.currentLocaleLanguage() {
             case .german:
                 infoBox = localizedInfoBox.deInfoBox
-            case .italian:
-                infoBox = localizedInfoBox.itInfoBox
             case .english:
                 infoBox = localizedInfoBox.enInfoBox
-            case .france:
-                infoBox = localizedInfoBox.frInfoBox
+            default:
+                infoBox = localizedInfoBox.enInfoBox
             }
             newState.homescreen.infoBox = UIStateModel.Homescreen.InfoBox(title: infoBox.title,
                                                                                       text: infoBox.msg,

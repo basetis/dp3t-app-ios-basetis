@@ -11,7 +11,7 @@ class NSViewController: UIViewController {
     // MARK: - Views
 
     private let loadingView = NSLoadingView()
-    private let swissFlagImage = UIImage(named: "ic_navbar_schweiz_wappen")?.withRenderingMode(.alwaysOriginal)
+    private let logoImage = UIImage(named: "basetis-logo")?.withRenderingMode(.alwaysOriginal)
 
     // MARK: - Public API
 
@@ -49,7 +49,7 @@ class NSViewController: UIViewController {
 
         navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
         if navigationController?.viewControllers.count == 1 {
-            navigationItem.leftBarButtonItem = UIBarButtonItem(customView: UIImageView(image: swissFlagImage))
+            navigationItem.leftBarButtonItem = UIBarButtonItem(customView: UIImageView(image: logoImage))
         }
     }
 

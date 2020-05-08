@@ -10,19 +10,40 @@ import Foundation
 enum Language: String {
     case german = "de"
     case english = "en"
-    case italian = "it"
-    case france = "fr"
+    case spanish = "es"
+    case catalan = "ca"
 
-    static var current: Language {
-        let preferredLanguages = Locale.preferredLanguages
-
-        for preferredLanguage in preferredLanguages {
-            if let code = preferredLanguage.components(separatedBy: "-").first,
-                let language = Language(rawValue: code) {
-                return language
-            }
+    
+    static func currentLocaleLanguage() -> Language {
+       var currentLocale: [String]
+       if let languageCode = UserDefaults.standard.value(forKey: "AppleLanguages") as? [String] {
+           currentLocale = languageCode
+       } else {
+           currentLocale = [Locale.current.languageCode ?? "ca"]
+       }
+       
+       let firstLocale = currentLocale.first
+       if firstLocale == Language.catalan.rawValue || (firstLocale?.contains("ca") ?? false) {
+           return .catalan
+       } else if firstLocale == Language.spanish.rawValue || (firstLocale?.contains("es") ?? false) {
+           return .spanish
+       } else if firstLocale == Language.english.rawValue || (firstLocale?.contains("en") ?? false) {
+           return .english
+       } else {
+           return .spanish
+       }
+    }
+    
+    var name: String {
+        switch self {
+        case .english:
+            return "English"
+        case .spanish:
+            return "Español"
+        case .catalan:
+            return "Català"
+        default:
+            return ""
         }
-
-        return .german
     }
 }

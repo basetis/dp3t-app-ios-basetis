@@ -8,6 +8,6 @@ import UIKit
 
 extension String {
     var ub_localized: String {
-        NSLocalizedString(self, comment: "")
+        NSLocalizedString(self, bundle: StaticVars.bundle, comment: "")
     }
 }

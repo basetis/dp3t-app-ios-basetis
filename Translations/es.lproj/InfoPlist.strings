@@ -1,0 +1,3 @@
+"CFBundleDisplayName" = "dp3t app";
+"NSBluetoothPeripheralUsageDescription" = "Los encuentros se reconocerán en segundo plano a través de Bluetooth de baja energía (BLE).";
+"NSBluetoothAlwaysUsageDescription" = "Los encuentros se reconocerán en segundo plano a través de Bluetooth de baja energía (BLE).";

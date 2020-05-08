@@ -98,6 +98,43 @@ class NSMeldungView: NSModuleBaseView {
         setCustomSpacing(NSPadding.medium, after: exposedView)
         setCustomSpacing(NSPadding.medium, after: infectedView)
     }
+    
+    func localizeUI() {
+        
+        headerTitle = "reports_title_homescreen".ub_localized
+        
+        noMeldungenView.updateTexts(title: "meldungen_no_meldungen_title".ub_localized, subText: "meldungen_no_meldungen_subtitle".ub_localized, additionalText: nil, additionalURL: nil)
+        
+        exposedView.updateTexts(title: "meldungen_meldung_title".ub_localized, subText: "meldungen_meldung_text".ub_localized, additionalText: nil, additionalURL: nil)
+        
+        infectedView.updateTexts(title: "meldung_homescreen_positiv_title".ub_localized, subText: "meldung_homescreen_positiv_text".ub_localized, additionalText: nil, additionalURL: nil)
+        
+        noPushView.model = NSTracingErrorView.NSTracingErrorViewModel(icon: UIImage(named: "ic-push-disabled")!, title: "push_deactivated_title".ub_localized, text: "push_deactivated_text".ub_localized, buttonTitle: "push_open_settings_button".ub_localized, action: {
+            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString),
+                UIApplication.shared.canOpenURL(settingsUrl) else { return }
+
+            UIApplication.shared.open(settingsUrl)
+        })
+        
+        unexpectedErrorView.model = NSTracingErrorView.NSTracingErrorViewModel(icon: UIImage(named: "ic-error")!, title: "unexpected_error_title".ub_localized, text: "unexpected_error_with_retry".ub_localized, buttonTitle: "homescreen_meldung_data_outdated_retry_button".ub_localized, action: {
+            DatabaseSyncer.shared.forceSyncDatabase()
+        })
+        
+        syncProblemView.model = NSTracingErrorView.NSTracingErrorViewModel(icon: UIImage(named: "ic-error")!, title: "homescreen_meldung_data_outdated_title".ub_localized, text: "homescreen_meldung_data_outdated_text".ub_localized, buttonTitle: "homescreen_meldung_data_outdated_retry_button".ub_localized, action: {
+            DatabaseSyncer.shared.forceSyncDatabase()
+        })
+        
+        backgroundFetchProblemView.model = NSTracingErrorView.NSTracingErrorViewModel(icon: UIImage(named: "ic-refresh")!, title: "meldungen_background_error_title".ub_localized, text: "meldungen_background_error_text".ub_localized, buttonTitle: "meldungen_background_error_button".ub_localized, action: {
+            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString),
+                UIApplication.shared.canOpenURL(settingsUrl) else { return }
+            
+            UIApplication.shared.open(URL(string: "App-prefs:Bluetooth")!)
+//            UIApplication.shared.open(settingsUrl)
+        })
+        
+        layoutSubviews()
+    }
+
 }
 
 private class NSMoreInfoView: UIView {

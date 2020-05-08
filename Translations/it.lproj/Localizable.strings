@@ -348,7 +348,7 @@
 "meldungen_detail_call_last_call" = "Ultima telefonata: {DATE}";
 
 /*Subtitel im Onboarding erste Seite*/
-"app_subtitle" = "Subtitle";
+"app_subtitle" = "Anticipare il virus";
 
 /*Onboarding: Titel oben*/
 "onboarding_prinzip_heading" = "Lo scopo";
