@@ -167,7 +167,6 @@
 		242D2268245C4BD8005DAEA8 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E7C0D2B242D04290017C4F9 /* Inter-Regular.ttf */; };
 		242D2269245C4BD8005DAEA8 /* Impressum in Resources */ = {isa = PBXBuildFile; fileRef = 6EC7E820245B27E10015A55B /* Impressum */; };
 		242D226A245C4BD8005DAEA8 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E7C0D2C242D04290017C4F9 /* Inter-Medium.ttf */; };
-		242D2275245C4BE6005DAEA8 /* DP3TSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 242D2274245C4BE6005DAEA8 /* DP3TSDK */; };
 		242D2276245D62D8005DAEA8 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24780B06242DFCD9003BB26C /* UserStorage.swift */; };
 		242D2277245D62D9005DAEA8 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24780B06242DFCD9003BB26C /* UserStorage.swift */; };
 		242D2279245D64BA005DAEA8 /* Environment+PublicKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D2278245D64BA005DAEA8 /* Environment+PublicKeys.swift */; };
@@ -255,6 +254,8 @@
 		8B4B65142461C0AA00C5CDF2 /* ChangeLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4B65132461C0AA00C5CDF2 /* ChangeLanguageViewController.swift */; };
 		8B4CD26824629CE6001EEBD3 /* NSSimpleModuleWithActionBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4CD26724629CE6001EEBD3 /* NSSimpleModuleWithActionBaseView.swift */; };
 		8B4CD26A2462BF14001EEBD3 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4CD2692462BF14001EEBD3 /* LanguageManager.swift */; };
+		8B51AC0A2465A81D00CB837E /* DP3TSDK_CALIBRATION in Frameworks */ = {isa = PBXBuildFile; productRef = 8B51AC092465A81D00CB837E /* DP3TSDK_CALIBRATION */; };
+		8B51AC0C2465A81D00CB837E /* DP3TSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 8B51AC0B2465A81D00CB837E /* DP3TSDK */; };
 		8E81CC99241FCC7D006F2437 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E81CC98241FCC7D006F2437 /* AppDelegate.swift */; };
 		8E81CC9D241FCC7D006F2437 /* NSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E81CC9C241FCC7D006F2437 /* NSViewController.swift */; };
 		8E81CCA2241FCC7F006F2437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E81CCA1241FCC7F006F2437 /* Assets.xcassets */; };
@@ -514,8 +515,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				242D2275245C4BE6005DAEA8 /* DP3TSDK in Frameworks */,
+				8B51AC0C2465A81D00CB837E /* DP3TSDK in Frameworks */,
 				8E81CCCF241FD813006F2437 /* SnapKit in Frameworks */,
+				8B51AC0A2465A81D00CB837E /* DP3TSDK_CALIBRATION in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1166,7 +1168,8 @@
 			name = DP3TApp;
 			packageProductDependencies = (
 				8E81CCCE241FD813006F2437 /* SnapKit */,
-				242D2274245C4BE6005DAEA8 /* DP3TSDK */,
+				8B51AC092465A81D00CB837E /* DP3TSDK_CALIBRATION */,
+				8B51AC0B2465A81D00CB837E /* DP3TSDK */,
 			);
 			productName = IVC;
 			productReference = 8E81CC95241FCC7D006F2437 /* DP3TApp.app */;
@@ -1228,7 +1231,7 @@
 			mainGroup = 8E81CC8C241FCC7D006F2437;
 			packageReferences = (
 				8E81CCCD241FD813006F2437 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				DF86B5F6245233C70019C229 /* XCRemoteSwiftPackageReference "dp3t-sdk-ios" */,
+				8B51AC082465A81D00CB837E /* XCRemoteSwiftPackageReference "dp3t-sdk-ios" */,
 			);
 			productRefGroup = 8E81CC96241FCC7D006F2437 /* Products */;
 			projectDirPath = "";
@@ -2506,20 +2509,20 @@
 				kind = branch;
 			};
 		};
+		8B51AC082465A81D00CB837E /* XCRemoteSwiftPackageReference "dp3t-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/basetis/dp3t-sdk-ios.git";
+			requirement = {
+				branch = test/test;
+				kind = branch;
+			};
+		};
 		8E81CCCD241FD813006F2437 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.0.1;
-			};
-		};
-		DF86B5F6245233C70019C229 /* XCRemoteSwiftPackageReference "dp3t-sdk-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/DP-3T/dp3t-sdk-ios.git";
-			requirement = {
-				branch = develop;
-				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -2535,9 +2538,14 @@
 			package = 242D21D6245C4BD8005DAEA8 /* XCRemoteSwiftPackageReference "dp3t-sdk-ios" */;
 			productName = DP3TSDK_CALIBRATION;
 		};
-		242D2274245C4BE6005DAEA8 /* DP3TSDK */ = {
+		8B51AC092465A81D00CB837E /* DP3TSDK_CALIBRATION */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF86B5F6245233C70019C229 /* XCRemoteSwiftPackageReference "dp3t-sdk-ios" */;
+			package = 8B51AC082465A81D00CB837E /* XCRemoteSwiftPackageReference "dp3t-sdk-ios" */;
+			productName = DP3TSDK_CALIBRATION;
+		};
+		8B51AC0B2465A81D00CB837E /* DP3TSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B51AC082465A81D00CB837E /* XCRemoteSwiftPackageReference "dp3t-sdk-ios" */;
 			productName = DP3TSDK;
 		};
 		8E81CCCE241FD813006F2437 /* SnapKit */ = {
