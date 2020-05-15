@@ -79,11 +79,27 @@ class ConfigManager: NSObject {
 
     public func loadConfig(completion: @escaping (ConfigResponseBody?) -> Void) {
 
-
-
         Logger.log("Load Config", appState: true)
+        
+        let configDict: [String: Any?] = ["forceUpdate": false,
+                                          "forceTraceShutdown": false,
+                                          "infoBox": nil,
+                                          "sdkConfig": ["numberOfWindowsForExposure": 3,
+                                                        "contactAttenuationThreshold": 73]]
+        
+        if let configData = try? JSONSerialization.data(withJSONObject: configDict, options: []),
+            let config = try? JSONDecoder().decode(ConfigResponseBody.self, from: configData) {
+            
+            ConfigManager.currentConfig = config
+            completion(config)
+        } else {
+            Logger.log("Failed to load config, error:")
+            completion(nil)
+        }
+        return
 
-        dataTask = session.dataTask(with: Endpoint.config(appversion: ConfigManager.appVersion, osversion: ConfigManager.osVersion, buildnr: ConfigManager.buildNumber).request(), completionHandler: { data, response, error in
+        // Request to server removed, values configured in app
+        /*dataTask = session.dataTask(with: Endpoint.config(appversion: ConfigManager.appVersion, osversion: ConfigManager.osVersion, buildnr: ConfigManager.buildNumber).request(), completionHandler: { data, response, error in
 
             guard let httpResponse = response as? HTTPURLResponse,
                 let data = data else {
@@ -120,7 +136,7 @@ class ConfigManager: NSObject {
             }
         })
 
-        dataTask?.resume()
+        dataTask?.resume()*/
     }
 
     public func startConfigRequest(window: UIWindow?) {
