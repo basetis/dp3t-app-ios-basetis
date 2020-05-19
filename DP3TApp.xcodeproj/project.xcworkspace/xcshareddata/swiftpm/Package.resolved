@@ -29,15 +29,6 @@
         }
       },
       {
-        "package": "DP3TSDK",
-        "repositoryURL": "https://github.com/basetis/dp3t-sdk-ios.git",
-        "state": {
-          "branch": "test/test",
-          "revision": "15b32864706a78ce04034bafe82cb54a284c4133",
-          "version": null
-        }
-      },
-      {
         "package": "KituraContracts",
         "repositoryURL": "https://github.com/IBM-Swift/KituraContracts.git",
         "state": {
