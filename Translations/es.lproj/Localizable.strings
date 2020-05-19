@@ -14,7 +14,7 @@
 "push_exposed_title" = "Nuevo mensaje";
 "push_exposed_text" = "Abre la aplicación para leer el mensaje";
 "android_button_permission_location" = "Localización de permisos";
-"android_button_ok" = "Okay";
+"android_button_ok" = "Vale";
 "onboarding_continue_button" = "Seguir";
 "onboarding_finish_button" = "Terminar";
 "unexpected_error_title" = "Ha ocurrido un error inesperado";
@@ -36,7 +36,7 @@
 "push_deactivated_title" = "Mensajes desactivados";
 "push_deactivated_text" = "Cambie la configuración para recibir información directamente en caso de un informe.";
 "meldungen_meldung_title" = "Posible infección";
-"meldungen_meldung_text" = "Se sospecha una infección.";
+"meldungen_meldung_text" = "Se sospecha de una infección.";
 "tracing_active_title" = "Seguimiento activo";
 "tracing_active_text" = "Los encuentros se registrarán de forma anónima.";
 "android_tracing_error_title" = "Seguimiento no activo";
@@ -65,7 +65,7 @@
 "android_debug_sdk_reset_text" = "El estado del SDK local se ha restablecido.";
 "tab_tracing_title" = "Rastreo";
 "whattodo_title_symptoms" = "Síntomas de la enfermedad";
-"whattodo_subtitle_symptoms" = "Qué hacer si ...";
+"whattodo_subtitle_symptoms" = "Qué hacer si tienes...";
 "whattodo_title_positivetest" = "da positivo";
 "whattodo_subtitle_positivetest" = "Qué hacer si ...";
 "inform_detail_subtitle" = "Qué hacer si ...";
@@ -96,20 +96,20 @@
 "no_meldungen_box_subtitle" = "¿Qué tengo que hacer?";
 "no_meldungen_box_text" = "Siga las recomendaciones del gobierno sobre higiene y distanciamiento social.";
 "meldung_detail_positive_tested_title" = "Probado positivo";
-"meldung_detail_positive_tested_subtitle" = "Has dado positivo por el nuevo coronavirus.";
+"meldung_detail_positive_tested_subtitle" = "Has dado positivo en coronavirus.";
 "meldung_detail_positive_test_box_subtitle" = "¿Que tengo que hacer?";
 "meldung_detail_positive_test_box_title" = "Autoaislamiento";
 "meldung_detail_positive_test_box_text" = "Siga las instrucciones sobre autoaislamiento.";
 "tracing_ended_title" = "Seguimiento finalizado";
 "tracing_ended_text" = "No hay más encuentros registrados";
-"exposed_info_contact_hotline" = "Contacta el";
-"meldung_homescreen_positive_info_line1" = "Siga el";
+"exposed_info_contact_hotline" = "Contacta con";
+"meldung_homescreen_positive_info_line1" = "Siga las";
 "meldung_homescreen_positive_info_line2" = "Instrucciones sobre autoaislamiento";
 "meldung_detail_exposed_new_meldung" = "Nuevo reporte";
 "meldung_detail_exposed_title" = "Infección potencial";
 "meldung_homescreen_positiv_title" = "Probado positivo";
 "meldung_detail_exposed_subtitle" = "Posible infección sospechada";
-"meldung_homescreen_positiv_text" = "Has dado positivo por el nuevo coronavirus.";
+"meldung_homescreen_positiv_text" = "Has dado positivo en coronavirus.";
 "reset_onboarding" = "Restablecer incorporación";
 "date_today" = "Hoy";
 "date_days_ago" = "Hace {COUNT} días";
@@ -183,7 +183,7 @@
 "inform_code_invalid_subtitle" = "Si tiene alguna pregunta: +34 93 250 24 22";
 "date_one_day_ago" = "Hace 1 día";
 "meldung_detail_new_contact_title" = "Nuevo reporte";
-"meldung_detail_new_contact_subtitle" = "En este día, también fue posible una infección.";
+"meldung_detail_new_contact_subtitle" = "Es posible que te infectaras ese día.";
 "time_inconsistency_title" = "Error de tiempo";
 "time_inconsistency_text" = "El tiempo debe establecerse correctamente para que el rastreo funcione.";
 "begegnungen_restart_error_title" = "Reinicio requerido";
@@ -261,7 +261,7 @@
 "faq_button_url" = "https://web.gencat.cat/ca/coronavirus/preguntes-mes-frequents/";
 "inform_code_intro_title" = "Información importante";
 "inform_code_intro_text" = "Aunque no se envían datos personales relacionados con usted, puede ser que alguien recuerde su encuentro con usted desde la fecha.";
-"inform_code_intro_button" = "Okay";
+"inform_code_intro_button" = "Vale";
 "symptom_faq1_title" = "¿No estás seguro de los síntomas?";
 "symptom_faq1_text" = "¿Tiene síntomas pero no está seguro de lo que debe hacer? Responda las preguntas en el Chequeo de coronavirus FOPH para recibir consejos sobre qué hacer.";
 "meldungen_positive_tested_faq1_title" = "¿Por qué ha terminado el rastreo?";
@@ -270,7 +270,8 @@
 "exposed_info_contact_hotline_name" = "Coronavirus infoline";
 "date_in_one_day" = "1 día más";
 "date_in_days" = "Quedan {COUNT} días";
-"date_text_before_date" = "a {DATE}";
+"date_text_before_date" = "el {DATE}";
 "android_accessibility_back_button" = "Atrás";
 
 "change_language" = "Selecciona el idioma";
+

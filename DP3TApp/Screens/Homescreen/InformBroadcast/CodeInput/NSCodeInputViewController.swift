@@ -131,14 +131,14 @@ class NSCodeInputViewController: NSInformStepViewController, NSCodeControlProtoc
         ReportingManager.shared.report(covidCode: codeControl.code()) { [weak self] error in
             guard let self = self else { return }
 
-            if let error = error {
-                switch error {
-                case let .failure(error: error):
-                    self.stopLoading(error: error, reloadHandler: self.sendPressed)
-
-                    self.navigationItem.rightBarButtonItem = self.rightBarButtonItem
-
-                case .invalidCode:
+            if error != nil {
+//                switch error {
+//                case let .failure(error: error):
+//                    self.stopLoading(error: error, reloadHandler: self.sendPressed)
+//
+//                    self.navigationItem.rightBarButtonItem = self.rightBarButtonItem
+//
+//                case .invalidCode:
                     self.codeControl.clearAndRestart()
                     self.errorView.isHidden = false
                     self.textLabel.isHidden = true
@@ -151,7 +151,7 @@ class NSCodeInputViewController: NSInformStepViewController, NSCodeControlProtoc
                     self.navigationItem.hidesBackButton = false
                     self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
                     self.navigationItem.rightBarButtonItem = self.rightBarButtonItem
-                }
+//                }
 
             } else {
                 // success
