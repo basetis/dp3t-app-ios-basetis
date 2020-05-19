@@ -13,6 +13,8 @@ struct AuthorizationRequestBody: Codable {
 
 struct AuthorizationResponseBody: Codable {
     let accessToken: JWTToken
+    let fake: Int
+    let error: String?
 }
 
 struct JWTBody: Codable {

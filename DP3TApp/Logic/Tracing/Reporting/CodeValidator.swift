@@ -16,9 +16,9 @@ class CodeValidator {
     }
 
     func sendCodeRequest(code: String, isFakeRequest fake: Bool, completion: @escaping (ValidationResult) -> Void) {
-        let auth = AuthorizationRequestBody(authorizationCode: code, fake: fake ? 1 : 0)
+//        let auth = AuthorizationRequestBody(authorizationCode: code, fake: fake ? 1 : 0)
 
-        let dataTask = session.dataTask(with: Endpoint.onset(auth: auth).request(), completionHandler: { data, response, error in
+        let dataTask = session.dataTask(with: Endpoint.onset(code: code, fake: fake).request(), completionHandler: { data, response, error in
 
             DispatchQueue.main.async {
                 if let response = response as? HTTPURLResponse {

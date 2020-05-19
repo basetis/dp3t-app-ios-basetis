@@ -128,8 +128,7 @@ class NSMeldungView: NSModuleBaseView {
             guard let settingsUrl = URL(string: UIApplication.openSettingsURLString),
                 UIApplication.shared.canOpenURL(settingsUrl) else { return }
             
-            UIApplication.shared.open(URL(string: "App-prefs:Bluetooth")!)
-//            UIApplication.shared.open(settingsUrl)
+            UIApplication.shared.open(settingsUrl)
         })
         
         layoutSubviews()
