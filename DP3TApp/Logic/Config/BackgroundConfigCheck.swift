@@ -39,9 +39,9 @@ private class ConfigLoadOperation: Operation {
 private var didRegisterBackgroundTask: Bool = false
 
 class ConfigBackgroundTaskManager {
-    fileprivate static let taskIdentifier: String = "ch.admin.bag.dp3t.configtask" // must be in info.plist
+    fileprivate static let taskIdentifier: String = "com.basetis.admin.bag.dp3t.configtask" // must be in info.plist
 
-    fileprivate static let syncInterval: TimeInterval = 24 * 60 * 60
+    fileprivate static let syncInterval: TimeInterval = 6 * 60 * 60
 
     /// A logger for debugging
     #if CALIBRATION

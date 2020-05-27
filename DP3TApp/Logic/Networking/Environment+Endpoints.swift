@@ -15,8 +15,8 @@ extension Endpoint {
     }*/
 
     /// Validate Code
-    static func onset(auth: AuthorizationRequestBody) -> Endpoint {
-        return Environment.current.codegenService.endpoint("onset", method: .post, headers: ["accept": "*/*", "Content-Type": "application/json"], body: auth)
+    static func onset(code: String, fake: Bool) -> Endpoint {
+        return Environment.current.codegenService.endpoint("onset/\(code)/\(fake ? 1 : 0)/\(Environment.currentValidationMethod.rawValue)", method: .get, headers: ["accept": "*/*", "Content-Type": "application/json"])
     }
 }
 
