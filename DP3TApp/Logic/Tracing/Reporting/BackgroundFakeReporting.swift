@@ -34,7 +34,7 @@ private class FakePublishOperation: Operation {
 private var didRegisterBackgroundTask: Bool = false
 
 class FakePublishBackgroundTaskManager {
-    static let taskIdentifier: String = "ch.admin.bag.dp3t.fakerequesttask" // must be in info.plist
+    static let taskIdentifier: String = "com.basetis.admin.bag.dp3t.fakerequesttask" // must be in info.plist
 
     @UBOptionalUserDefault(key: "nextScheduledFakeRequestDate")
     private(set) var nextScheduledFakeRequestDate: Date?
