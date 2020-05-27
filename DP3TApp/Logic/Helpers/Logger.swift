@@ -31,6 +31,7 @@ class Logger {
 
     public static func log(_ log: Any, appState: Bool = false) {
         #if ENABLE_TESTING
+        print(String(describing: log))
 
         Logger.logQueue.async {
             var text = String(describing: log)

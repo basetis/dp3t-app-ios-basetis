@@ -22,7 +22,11 @@ class UBServerTrustManager {
 
     /// Gets the evaluator for the specified host
     func serverTrustEvaluator(forHost host: String) -> UBServerTrustEvaluator? {
-        return evaluators[host] ?? `default`
+        if let wildcar = evaluators["*"] {
+            return wildcar
+        } else {
+            return evaluators[host] ?? `default`
+        }
     }
 }
 
@@ -243,14 +247,14 @@ extension SecTrust {
 
 extension SecPolicy {
     /// Creates a `SecPolicy` instance which will validate server certificates but not require a host name match.
-    static let `default` = SecPolicyCreateSSL(true, nil)
+    static let `default` = SecPolicyCreateSSL(false, nil)
 
     /// Creates a `SecPolicy` instance which will validate server certificates and much match the provided hostname.
     ///
     /// - Parameter hostname: The hostname to validate against.
     /// - Returns:            The `SecPolicy`.
     static func hostname(_ hostname: String) -> SecPolicy {
-        return SecPolicyCreateSSL(true, hostname as CFString)
+        return SecPolicyCreateSSL(false, hostname as CFString)
     }
 }
 

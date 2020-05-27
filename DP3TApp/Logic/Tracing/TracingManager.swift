@@ -70,7 +70,8 @@ class TracingManager: NSObject {
                                                urlSession: URLSession.certificatePinned)
                 }
             #else
-                try DP3TTracing.initialize(with: .manual(descriptor))
+            try DP3TTracing.initialize(with: .manual(descriptor),
+                                       urlSession: URLSession.certificatePinned)
             #endif
         } catch {
             UIStateManager.shared.tracingStartError = error

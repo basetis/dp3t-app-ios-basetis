@@ -29,6 +29,15 @@
         }
       },
       {
+        "package": "DP3TSDK",
+        "repositoryURL": "https://github.com/basetis/dp3t-sdk-ios.git",
+        "state": {
+          "branch": "test/test",
+          "revision": "022e2686a1550e32e217477a605b8a88d6acf8be",
+          "version": null
+        }
+      },
+      {
         "package": "KituraContracts",
         "repositoryURL": "https://github.com/IBM-Swift/KituraContracts.git",
         "state": {
@@ -87,8 +96,8 @@
         "repositoryURL": "https://github.com/apple/swift-protobuf.git",
         "state": {
           "branch": null,
-          "revision": "7790acf0a81d08429cb20375bf42a8c7d279c5fe",
-          "version": "1.8.0"
+          "revision": "7f36441e3372665b1b414f8ac93b5905cc42a405",
+          "version": "1.9.0"
         }
       }
     ]

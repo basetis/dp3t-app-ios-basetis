@@ -4,8 +4,8 @@
 <dict>
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
 	<array>
-		<string>ch.admin.bag.dp3t.configtask</string>
-		<string>ch.admin.bag.dp3t.fakerequesttask</string>
+		<string>com.basetis.admin.bag.dp3t.configtask</string>
+		<string>com.basetis.admin.bag.dp3t.fakerequesttask</string>
 		<string>org.dpppt.synctask</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
@@ -21,7 +21,7 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
