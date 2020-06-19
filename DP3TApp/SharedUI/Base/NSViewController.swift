@@ -11,7 +11,7 @@ class NSViewController: UIViewController {
     // MARK: - Views
 
     private let loadingView = NSLoadingView()
-    private let logoImage = UIImage(named: "basetis-logo")?.withRenderingMode(.alwaysOriginal)
+    private let logoImage = UIImage(named: "white-brand-logo")?.withRenderingMode(.alwaysOriginal)
 
     // MARK: - Public API
 
