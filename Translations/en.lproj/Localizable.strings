@@ -793,3 +793,5 @@
 
 
 "change_language" = "Select language";
+
+"refresh_database_button" = "Sync now";

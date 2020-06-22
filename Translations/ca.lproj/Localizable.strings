@@ -273,4 +273,4 @@
 "date_text_before_date" = "el {DATE}";
 
 "change_language" = "Selecciona l'idioma";
-
+"refresh_database_button" = "Sincronitzar";

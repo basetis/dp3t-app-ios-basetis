@@ -274,4 +274,4 @@
 "android_accessibility_back_button" = "Atrás";
 
 "change_language" = "Selecciona el idioma";
-
+"refresh_database_button" = "Sincronizar";
