@@ -20,6 +20,7 @@ class NSHomescreenViewController: NSTitleViewScrollViewController {
     private let whatToDoPositiveTestButton = NSWhatToDoButton(title: "whattodo_title_positivetest".ub_localized, subtitle: "whattodo_subtitle_positivetest".ub_localized, image: UIImage(named: "illu-positiv-getestet"))
 
     private let syncronizeButton = NSButton(title: "refresh_database_button".ub_localized, style: .uppercase(.ns_purple))
+    private let syncronizeContainerView = UIStackView()
 
     private let debugScreenButton = NSButton(title: "debug_settings_title".ub_localized, style: .outlineUppercase(.ns_red))
 
@@ -160,15 +161,16 @@ class NSHomescreenViewController: NSTitleViewScrollViewController {
         stackScrollView.addArrangedView(whatToDoPositiveTestButton)
         stackScrollView.addSpacerView(2.0 * NSPadding.large)
         
-        let view = UIStackView()
-        view.addSpacerView(2*NSPadding.medium)
-        view.addArrangedView(syncronizeButton)
-        view.addSpacerView(2*NSPadding.medium)
-        view.alignment = .center
-        view.axis = .horizontal
-        
-        stackScrollView.addArrangedView(view)
-        stackScrollView.addSpacerView(2.0 * NSPadding.large)
+        if lastState.homescreen.meldungen.meldung != .infected {
+            syncronizeContainerView.addSpacerView(2*NSPadding.medium)
+            syncronizeContainerView.addArrangedView(syncronizeButton)
+            syncronizeContainerView.addSpacerView(2*NSPadding.medium)
+            syncronizeContainerView.alignment = .center
+            syncronizeContainerView.axis = .horizontal
+            
+            stackScrollView.addArrangedView(syncronizeContainerView)
+            stackScrollView.addSpacerView(2.0 * NSPadding.large)
+        }
 
         #if ENABLE_TESTING
 
@@ -285,6 +287,10 @@ class NSHomescreenViewController: NSTitleViewScrollViewController {
         infoBoxView.uiState = state.homescreen.infoBox
         infoBoxView.isHidden = state.homescreen.infoBox == nil
 
+        if isInfected {
+            stackScrollView.removeView(syncronizeContainerView)
+        }
+        
         lastState = state
     }
 
@@ -330,7 +336,7 @@ class NSHomescreenViewController: NSTitleViewScrollViewController {
     
     private func syncronizeDB() {
         print("syncornizeDB")
-        DatabaseSyncer.shared.forceSyncDatabase()
+        DatabaseSyncer.shared.forceSyncDatabase(manually: true)
     }
 
     private let uploadDBButton = NSButton(title: "Upload DB to server", style: .outlineUppercase(.ns_red))

@@ -34,20 +34,20 @@ class DatabaseSyncer {
         }
     }
 
-    func forceSyncDatabase() {
-        syncDatabase(completionHandler: nil)
+    func forceSyncDatabase(manually: Bool = false) {
+        syncDatabase(forceManually: manually, completionHandler: nil)
     }
 
     @UBOptionalUserDefault(key: "lastDatabaseSync") private var lastDatabaseSync: Date?
     private var databaseIsSyncing = false
 
-    private func syncDatabase(completionHandler: ((UIBackgroundFetchResult) -> Void)?) {
+    private func syncDatabase(forceManually: Bool = false, completionHandler: ((UIBackgroundFetchResult) -> Void)?) {
         databaseIsSyncing = true
         let taskIdentifier = UIApplication.shared.beginBackgroundTask {
             // can't stop sync
         }
         Logger.log("Start Database Sync", appState: true)
-        DP3TTracing.sync { result in
+        DP3TTracing.sync(forceManually: forceManually) { result in
             switch result {
             case let .failure(e):
 
