@@ -31,8 +31,8 @@ class NSLoadingView: UIView {
 
     // MARK: - API
 
-    public func startLoading() {
-        alpha = 1.0
+    public func startLoading(withAlpha: CGFloat = 1.0) {
+        alpha = withAlpha
         errorStackView.alpha = 0.0
         loadingIndicatorView.alpha = 1.0
 

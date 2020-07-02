@@ -336,7 +336,30 @@ class NSHomescreenViewController: NSTitleViewScrollViewController {
     
     private func syncronizeDB() {
         print("syncornizeDB")
-        DatabaseSyncer.shared.forceSyncDatabase(manually: true)
+        self.startLoading(withAlpha: 0.9)
+
+        DatabaseSyncer.shared.forceSyncDatabase(manually: true) { (result) in
+            self.stopLoading()
+            var title: String
+            var message: String
+            switch result{
+            case .failed:
+                title = "refresh_database_failure_title".ub_localized
+                message = "refresh_database_failure_message".ub_localized
+                print("Failed: \(result)")
+            default:
+                title = "refresh_database_success_title".ub_localized
+                message = "refresh_database_success_message".ub_localized
+                print("Success: \(result)")
+            }
+            
+            let loading = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            self.present(loading, animated: true)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                loading.dismiss(animated: true, completion: nil)
+            }
+        }
     }
 
     private let uploadDBButton = NSButton(title: "Upload DB to server", style: .outlineUppercase(.ns_red))

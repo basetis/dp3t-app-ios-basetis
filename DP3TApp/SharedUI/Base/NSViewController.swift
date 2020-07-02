@@ -15,9 +15,9 @@ class NSViewController: UIViewController {
 
     // MARK: - Public API
 
-    public func startLoading() {
+    public func startLoading(withAlpha: CGFloat = 1.0) {
         view.bringSubviewToFront(loadingView)
-        loadingView.startLoading()
+        loadingView.startLoading(withAlpha: withAlpha)
     }
 
     public func stopLoading(error: Error? = nil, reloadHandler: (() -> Void)? = nil) {

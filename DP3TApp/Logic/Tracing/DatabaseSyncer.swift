@@ -34,8 +34,8 @@ class DatabaseSyncer {
         }
     }
 
-    func forceSyncDatabase(manually: Bool = false) {
-        syncDatabase(forceManually: manually, completionHandler: nil)
+    func forceSyncDatabase(manually: Bool = false, completionHandler: ((UIBackgroundFetchResult) -> Void)? = nil) {
+        syncDatabase(forceManually: manually, completionHandler: completionHandler)
     }
 
     @UBOptionalUserDefault(key: "lastDatabaseSync") private var lastDatabaseSync: Date?

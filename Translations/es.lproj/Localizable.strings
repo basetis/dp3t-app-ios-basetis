@@ -275,3 +275,7 @@
 
 "change_language" = "Selecciona el idioma";
 "refresh_database_button" = "Sincronizar";
+"refresh_database_success_title" = "Éxito";
+"refresh_database_success_message" = "Sincronización finalizada.";
+"refresh_database_failure_title" = "Error";
+"refresh_database_failure_message" = "Error en la sincronización. Por favor inténtelo más tarde.";

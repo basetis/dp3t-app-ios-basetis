@@ -795,3 +795,7 @@
 "change_language" = "Select language";
 
 "refresh_database_button" = "Sync now";
+"refresh_database_success_title" = "Success";
+"refresh_database_success_message" = "Syncronization completed";
+"refresh_database_failure_title" = "Failure";
+"refresh_database_failure_message" = "Syncronization failed. Please try again later.";
