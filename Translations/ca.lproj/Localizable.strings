@@ -273,4 +273,8 @@
 "date_text_before_date" = "el {DATE}";
 
 "change_language" = "Selecciona l'idioma";
-
+"refresh_database_button" = "Sincronitzar";
+"refresh_database_success_title" = "Èxit";
+"refresh_database_success_message" = "Sincronització finalitzada.";
+"refresh_database_failure_title" = "Error";
+"refresh_database_failure_message" = "Error en la sincronització. Si us plau, intenta-ho més tard.";
