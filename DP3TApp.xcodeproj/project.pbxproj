@@ -254,8 +254,8 @@
 		8B4B65142461C0AA00C5CDF2 /* ChangeLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4B65132461C0AA00C5CDF2 /* ChangeLanguageViewController.swift */; };
 		8B4CD26824629CE6001EEBD3 /* NSSimpleModuleWithActionBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4CD26724629CE6001EEBD3 /* NSSimpleModuleWithActionBaseView.swift */; };
 		8B4CD26A2462BF14001EEBD3 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4CD2692462BF14001EEBD3 /* LanguageManager.swift */; };
-		8BF88789246F06F00073BC4C /* DP3TSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 8BF88788246F06F00073BC4C /* DP3TSDK */; };
-		8BF8878B246F06F50073BC4C /* DP3TSDK_CALIBRATION in Frameworks */ = {isa = PBXBuildFile; productRef = 8BF8878A246F06F50073BC4C /* DP3TSDK_CALIBRATION */; };
+		8B585EAD24B4951F00EC2B58 /* DP3TSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 8B585EAC24B4951F00EC2B58 /* DP3TSDK */; };
+		8B585EAF24B4952300EC2B58 /* DP3TSDK_CALIBRATION in Frameworks */ = {isa = PBXBuildFile; productRef = 8B585EAE24B4952300EC2B58 /* DP3TSDK_CALIBRATION */; };
 		8E81CC99241FCC7D006F2437 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E81CC98241FCC7D006F2437 /* AppDelegate.swift */; };
 		8E81CC9D241FCC7D006F2437 /* NSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E81CC9C241FCC7D006F2437 /* NSViewController.swift */; };
 		8E81CCA2241FCC7F006F2437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E81CCA1241FCC7F006F2437 /* Assets.xcassets */; };
@@ -440,7 +440,7 @@
 		8B4CD26C2462FEE7001EEBD3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8B4CD26D24631586001EEBD3 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8B4CD26E24631586001EEBD3 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8BF88787246F06000073BC4C /* dp3t-sdk-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "dp3t-sdk-ios"; path = "../../dp3t-sdk-ios"; sourceTree = "<group>"; };
+		8B585EAB24B494DB00EC2B58 /* dp3t-sdk-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "dp3t-sdk-ios"; path = "../../dp3t-sdk-ios"; sourceTree = "<group>"; };
 		8E81CC95241FCC7D006F2437 /* DP3TApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DP3TApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E81CC98241FCC7D006F2437 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E81CC9C241FCC7D006F2437 /* NSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSViewController.swift; sourceTree = "<group>"; };
@@ -516,8 +516,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BF88789246F06F00073BC4C /* DP3TSDK in Frameworks */,
-				8BF8878B246F06F50073BC4C /* DP3TSDK_CALIBRATION in Frameworks */,
+				8B585EAD24B4951F00EC2B58 /* DP3TSDK in Frameworks */,
+				8B585EAF24B4952300EC2B58 /* DP3TSDK_CALIBRATION in Frameworks */,
 				8E81CCCF241FD813006F2437 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -989,7 +989,7 @@
 		8E81CC97241FCC7D006F2437 /* DP3TApp */ = {
 			isa = PBXGroup;
 			children = (
-				8BF88787246F06000073BC4C /* dp3t-sdk-ios */,
+				8B585EAB24B494DB00EC2B58 /* dp3t-sdk-ios */,
 				DC286A24242CE0AD001D5344 /* Logic */,
 				DC286A27242CE1D2001D5344 /* Screens */,
 				6EBD8D2A242CB7D500686D9F /* SharedUI */,
@@ -1170,8 +1170,8 @@
 			name = DP3TApp;
 			packageProductDependencies = (
 				8E81CCCE241FD813006F2437 /* SnapKit */,
-				8BF88788246F06F00073BC4C /* DP3TSDK */,
-				8BF8878A246F06F50073BC4C /* DP3TSDK_CALIBRATION */,
+				8B585EAC24B4951F00EC2B58 /* DP3TSDK */,
+				8B585EAE24B4952300EC2B58 /* DP3TSDK_CALIBRATION */,
 			);
 			productName = IVC;
 			productReference = 8E81CC95241FCC7D006F2437 /* DP3TApp.app */;
@@ -2536,11 +2536,11 @@
 			package = 242D21D6245C4BD8005DAEA8 /* XCRemoteSwiftPackageReference "dp3t-sdk-ios" */;
 			productName = DP3TSDK_CALIBRATION;
 		};
-		8BF88788246F06F00073BC4C /* DP3TSDK */ = {
+		8B585EAC24B4951F00EC2B58 /* DP3TSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DP3TSDK;
 		};
-		8BF8878A246F06F50073BC4C /* DP3TSDK_CALIBRATION */ = {
+		8B585EAE24B4952300EC2B58 /* DP3TSDK_CALIBRATION */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DP3TSDK_CALIBRATION;
 		};
