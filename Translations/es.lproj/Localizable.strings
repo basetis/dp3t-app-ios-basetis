@@ -78,7 +78,7 @@
 "symptom_detail_title" = "¿Me siento enfermo?";
 "symptom_detail_box_subtitle" = "En el caso de los síntomas ...";
 "symptom_detail_box_title" = "Contacte a su médico";
-"symptom_detail_box_button" = "A la comprobación de coronavirus";
+"symptom_detail_box_button" = "Síntomas del coronavirus";
 "symptom_detail_box_text" = "Si tiene posibles síntomas de coronavirus, comuníquese con su médico o con el servicio de emergencias médicas.";
 "inform_detail_navigation_title" = "Probado positivo";
 "symptom_detail_navigation_title" = "Síntomas";
@@ -121,7 +121,7 @@
 "meldungen_detail_explanation_text1" = "Podrías ser contagioso sin darte cuenta.";
 "meldungen_detail_explanation_text2" = "Proteja a su familia, sus amigos y quienes lo rodean. Evite los contactos hasta 10 días después de una posible infección.";
 "meldungen_detail_guard_others" = "Protege a otras personas";
-"meldungen_detail_guard_text" = "Si tienes alguna pregunta: +34 93 250 24 22";
+"meldungen_detail_guard_text" = "Si tienes alguna pregunta: +34 930 160 320";
 "meldungen_detail_call_again_button" = "Llama de nuevo";
 "meldungen_detail_call_last_call" = "Última llamada: {DATE}";
 "app_subtitle" = "Entre todos lo paramos";
@@ -180,7 +180,7 @@
 "homescreen_meldung_data_outdated_text" = "No ha sido posible sincronizar informes durante algún tiempo. Compruebe que su dispositivo esté conectado a Internet.";
 "homescreen_meldung_data_outdated_retry_button" = "Procesar de nuevo";
 "inform_code_invalid_title" = "Código inválido";
-"inform_code_invalid_subtitle" = "Si tiene alguna pregunta: +34 93 250 24 22";
+"inform_code_invalid_subtitle" = "Si tiene alguna pregunta: \ncomissio.desconfinament.persones@basetis.com";
 "date_one_day_ago" = "Hace 1 día";
 "meldung_detail_new_contact_title" = "Nuevo reporte";
 "meldung_detail_new_contact_subtitle" = "Es posible que te infectaras ese día.";
@@ -250,15 +250,16 @@
 "meldungen_detail_no_meldungen_continue" = "Seguir";
 "meldungen_detail_no_meldungen_hinweis" = "Tenga en cuenta";
 "no_meldungen_box_link" = "De esta manera, nos protegemos";
-"no_meldungen_box_url" = "https://canalsalut.gencat.cat/ca/salut-a-z/c/coronavirus-2019-ncov/ciutadania/confinament/";
+"no_meldungen_box_url" = "https://canalsalut.gencat.cat/ca/salut-a-z/c/coronavirus-2019-ncov/ciutadania/represa-de-la-normalitat/mesures-de-proteccio/";
 "inform_detail_faq1_title" = "¿Qué es un Covidcode?";
 "inform_detail_faq1_text" = "Las personas que dieron positivo para el nuevo coronavirus reciben un código Covid. Esto garantiza que solo los casos confirmados sean notificados a través de la aplicación.";
 "inform_detail_faq2_title" = "¿Cómo me mantengo anónimo?";
 "inform_detail_faq2_text" = "Solo se envían las claves temporales de su aplicación. Sin datos personales. Otras aplicaciones dp3t pueden verificar si han tenido un encuentro con su aplicación en los últimos días.";
 "inform_send_endtracing_title" = "Seguimiento finalizado";
 "inform_send_endtracing_text" = "Después de un texto positivo, el seguimiento finaliza automáticamente.";
-"infoline_tel_number" = "+34 93 250 24 22";
-"faq_button_url" = "https://web.gencat.cat/ca/coronavirus/preguntes-mes-frequents/";
+"infoline_tel_number" = "+34 930 160 320";
+"faq_button_url" = "https://canalsalut.gencat.cat/ca/salut-a-z/c/coronavirus-2019-ncov/ciutadania/";
+"faq_contact_button_url" = "https://canalsalut.gencat.cat/ca/salut-a-z/c/coronavirus-2019-ncov/ciutadania/represa-de-la-normalitat/deteccio-de-casos-i-seguiment-de-contactes/";
 "inform_code_intro_title" = "Información importante";
 "inform_code_intro_text" = "Aunque no se envían datos personales relacionados con usted, puede ser que alguien recuerde su encuentro con usted desde la fecha.";
 "inform_code_intro_button" = "Vale";

@@ -342,7 +342,7 @@
 "meldungen_detail_guard_others" = "Schützen Sie andere";
 
 /*Meldungen Detail: Weisse Box Text*/
-"meldungen_detail_guard_text" = "Bei Rückfragen:\n+34 93 250 24 22";
+"meldungen_detail_guard_text" = "Bei Rückfragen:\n+34 930 160 320";
 
 /*Meldungen Detail Button Weisse Box*/
 "meldungen_detail_call_again_button" = "Erneut anrufen";
@@ -521,7 +521,7 @@
 "inform_code_invalid_title" = "Code ungültig";
 
 /*Fehlermeldung Subtitle ungültiger Code*/
-"inform_code_invalid_subtitle" = "Bei Fragen: \n +34 93 250 24 22";
+"inform_code_invalid_subtitle" = "Bei Fragen: \n +34 930 160 320";
 
 /*Datum: Vor 1 Tag*/
 "date_one_day_ago" = "vor 1 Tag";
@@ -754,7 +754,7 @@
 "inform_send_endtracing_text" = "Nach einem positiven Test wird das Tracing automatisch beendet.";
 
 /*Telefonnummer der Infoline*/
-"infoline_tel_number" = "+34 93 250 24 22";
+"infoline_tel_number" = "+34 930 160 320";
 
 /*URL für Häufige Fragen Button*/
 "faq_button_url" = "https://www.bag.admin.ch/bag/de/home/krankheiten/ausbrueche-epidemien-pandemien/aktuelle-ausbrueche-epidemien/novel-cov/haeufig-gestellte-fragen.html";

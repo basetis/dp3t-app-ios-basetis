@@ -123,11 +123,12 @@ class NSButton: UBButton {
 }
 
 extension NSButton {
-    static func faqButton(color: UIColor) -> UIView {
+    static func faqButton(color: UIColor, withContactUrl: Bool = false) -> UIView {
         let faqButton = NSButton(title: "faq_button_title".ub_localized, style: .outlineUppercase(color))
 
         faqButton.touchUpCallback = {
-            if let url = URL(string: "faq_button_url".ub_localized) {
+            let urlString = (withContactUrl ? "faq_contact_button_url".ub_localized : "faq_button_url".ub_localized)
+            if let url = URL(string: urlString) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         }

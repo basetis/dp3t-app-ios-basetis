@@ -339,7 +339,7 @@
 "meldungen_detail_guard_others" = "Protect other people";
 
 /*Meldungen Detail: Weisse Box Text*/
-"meldungen_detail_guard_text" = "If you have any questions:+34 93 250 24 22";
+"meldungen_detail_guard_text" = "If you have any questions:+34 930 160 320";
 
 /*Meldungen Detail Button Weisse Box*/
 "meldungen_detail_call_again_button" = "Call again";
@@ -516,7 +516,7 @@
 "inform_code_invalid_title" = "Code invalid";
 
 /*Fehlermeldung Subtitle ungültiger Code*/
-"inform_code_invalid_subtitle" = "If you have any questions: +34 93 250 24 22";
+"inform_code_invalid_subtitle" = "If you have any questions: \ncomissio.desconfinament.persones@basetis.com";
 
 /*Datum: Vor 1 Tag*/
 "date_one_day_ago" = "1 day ago";
@@ -726,7 +726,7 @@
 "no_meldungen_box_link" = "This way, we protect ourselves";
 
 /*Keine Meldungen Weisse Box Link URL*/
-"no_meldungen_box_url" = "https://canalsalut.gencat.cat/ca/salut-a-z/c/coronavirus-2019-ncov/ciutadania/confinament/";
+"no_meldungen_box_url" = "https://canalsalut.gencat.cat/ca/salut-a-z/c/coronavirus-2019-ncov/ciutadania/represa-de-la-normalitat/mesures-de-proteccio/";
 
 /*Informieren Detail: FAQ Titel*/
 "inform_detail_faq1_title" = "What is a Covidcode?";
@@ -747,10 +747,11 @@
 "inform_send_endtracing_text" = "Following a positive text, tracing is automatically ended.";
 
 /*Telefonnummer der Infoline*/
-"infoline_tel_number" = "+34 93 250 24 22";
+"infoline_tel_number" = "+34 930 160 320";
 
 /*URL für Häufige Fragen Button*/
-"faq_button_url" = "https://web.gencat.cat/ca/coronavirus/preguntes-mes-frequents/";
+"faq_button_url" = "https://canalsalut.gencat.cat/ca/salut-a-z/c/coronavirus-2019-ncov/ciutadania/";
+"faq_contact_button_url" = "https://canalsalut.gencat.cat/ca/salut-a-z/c/coronavirus-2019-ncov/ciutadania/represa-de-la-normalitat/deteccio-de-casos-i-seguiment-de-contactes/";
 
 /*Informieren Flow: Titel erster Screen*/
 "inform_code_intro_title" = "Important information";
