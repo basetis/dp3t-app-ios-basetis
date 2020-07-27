@@ -83,6 +83,31 @@ class NSWhatToDoPositiveTestViewController: NSViewController {
 
         stackScrollView.addSpacerView(3 * NSPadding.large)
 
+        
+        let infoView = NSOnboardingInfoView(icon: UIImage(named: "ic-check-round")!, text: "inform_detail_intranet_text".ub_localized, title: "inform_detail_intranet_title".ub_localized, leftRightInset: 0)
+
+        stackScrollView.addArrangedView(infoView)
+
+        let buttonView = UIView()
+
+        let externalLinkButton = NSExternalLinkButton(color: .ns_purple)
+        externalLinkButton.title = "inform_detail_intranet_box_button".ub_localized
+        externalLinkButton.touchUpCallback = { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.presentIntranet()
+        }
+
+        buttonView.addSubview(externalLinkButton)
+        externalLinkButton.snp.makeConstraints { make in
+            make.top.left.bottom.equalToSuperview()
+            make.right.lessThanOrEqualToSuperview()
+        }
+
+//        infoView.stackView.addSpacerView(2 * NSPadding.medium)
+        infoView.stackView.addArrangedView(buttonView)
+        
+        stackScrollView.addSpacerView(2.0 * NSPadding.medium)
+        
         stackScrollView.addArrangedView(NSOnboardingInfoView(icon: UIImage(named: "ic-verified-user")!, text: "inform_detail_faq1_text".ub_localized, title: "inform_detail_faq1_title".ub_localized, leftRightInset: 0))
 
         stackScrollView.addSpacerView(2.0 * NSPadding.medium)
@@ -106,5 +131,12 @@ class NSWhatToDoPositiveTestViewController: NSViewController {
 
     private func presentInformViewController() {
         NSInformViewController.present(from: self)
+    }
+    
+    private func presentIntranet() {
+        if let url =
+            URL(string: "inform_detail_intranet_url".ub_localized) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
 }
