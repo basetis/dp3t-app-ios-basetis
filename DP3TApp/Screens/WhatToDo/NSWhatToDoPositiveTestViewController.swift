@@ -81,7 +81,7 @@ class NSWhatToDoPositiveTestViewController: NSViewController {
 
         stackScrollView.addArrangedView(informView)
 
-        stackScrollView.addSpacerView(NSPadding.large)
+        stackScrollView.addSpacerView(2.0 * NSPadding.large)
 
 
         let buttonView = UIView()
