@@ -251,9 +251,7 @@
 "meldungen_detail_no_meldungen_hinweis" = "A tenir en compte";
 "no_meldungen_box_link" = "D'aquesta manera, ens protegim";
 "no_meldungen_box_url" = "https://canalsalut.gencat.cat/ca/salut-a-z/c/coronavirus-2019-ncov/ciutadania/represa-de-la-normalitat/mesures-de-proteccio/";
-"inform_detail_intranet_title" = "Com puc comunicar que he donat positiu de COVID 19?";
-"inform_detail_intranet_text" = "Text text text text";
-"inform_detail_intranet_box_button" = "A la intranet";
+"inform_detail_intranet_box_button" = "Com puc comunicar que he donat positiu de COVID 19?";
 "inform_detail_intranet_url" = "https://sites.google.com/s/0B9v9EAhxyYALNFdhS09mZ0ZzWms/p/11J34Io2T3U_x2jHgu5PtlBvs7Ym0DZxf/edit";
 "inform_detail_faq1_title" = "Què és un codi Covid?";
 "inform_detail_faq1_text" = "Les persones que donen positiu en coronavirus reben un codi Covid. Això garanteix que només es notifiquin els casos confirmats a través de l'aplicació.";

@@ -81,12 +81,8 @@ class NSWhatToDoPositiveTestViewController: NSViewController {
 
         stackScrollView.addArrangedView(informView)
 
-        stackScrollView.addSpacerView(3 * NSPadding.large)
+        stackScrollView.addSpacerView(NSPadding.large)
 
-        
-        let infoView = NSOnboardingInfoView(icon: UIImage(named: "ic-check-round")!, text: "inform_detail_intranet_text".ub_localized, title: "inform_detail_intranet_title".ub_localized, leftRightInset: 0)
-
-        stackScrollView.addArrangedView(infoView)
 
         let buttonView = UIView()
 
@@ -103,8 +99,7 @@ class NSWhatToDoPositiveTestViewController: NSViewController {
             make.right.lessThanOrEqualToSuperview()
         }
 
-//        infoView.stackView.addSpacerView(2 * NSPadding.medium)
-        infoView.stackView.addArrangedView(buttonView)
+        stackScrollView.stackView.addArrangedView(buttonView)
         
         stackScrollView.addSpacerView(2.0 * NSPadding.medium)
         

@@ -728,9 +728,7 @@
 /*Keine Meldungen Weisse Box Link URL*/
 "no_meldungen_box_url" = "https://canalsalut.gencat.cat/ca/salut-a-z/c/coronavirus-2019-ncov/ciutadania/represa-de-la-normalitat/mesures-de-proteccio/";
 
-"inform_detail_intranet_title" = "";
-"inform_detail_intranet_text" = "Text text text text";
-"inform_detail_intranet_box_button" = "A la intranet";
+"inform_detail_intranet_box_button" = "How I can report that I have tested positive for COVID 19?";
 "inform_detail_intranet_url" = "https://sites.google.com/s/0B9v9EAhxyYALNFdhS09mZ0ZzWms/p/11J34Io2T3U_x2jHgu5PtlBvs7Ym0DZxf/edit";
 
 /*Informieren Detail: FAQ Titel*/
