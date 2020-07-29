@@ -114,14 +114,14 @@
 "date_today" = "Hoy";
 "date_days_ago" = "Hace {COUNT} días";
 "meldungen_detail_whattodo" = "¿Qué tengo que hacer?";
-"meldungen_detail_call" = "Escribe a: comissio.desconfinament.persones@basetis.com";
+"meldungen_detail_call" = "Escribe a: tracingapp@basetis.com";
 "meldungen_detail_call_text" = "Coronavirus infoline (24 horas al día)";
 "meldungen_detail_call_button" = "Llama ahora";
 "meldungen_detail_explanation_title" = "¡Ten cuidado!";
 "meldungen_detail_explanation_text1" = "Podrías ser un caso contagioso sin darte cuenta.";
 "meldungen_detail_explanation_text2" = "Protege a tu familia, amistades y a quien te rodea. Evita los contactos hasta 10 días después de una posible infección.";
 "meldungen_detail_guard_others" = "Protege a otras personas";
-"meldungen_detail_guard_text" = "Si tienes alguna duda: comissio.desconfinament.persones@basetis.com";
+"meldungen_detail_guard_text" = "Si tienes alguna duda: tracingapp@basetis.com";
 "meldungen_detail_call_again_button" = "Llama de nuevo";
 "meldungen_detail_call_last_call" = "Última llamada: {DATE}";
 "app_subtitle" = "Un paso por delante del virus";
@@ -180,7 +180,7 @@
 "homescreen_meldung_data_outdated_text" = "No ha sido posible sincronizar informes durante algún tiempo. Comprueba que tu dispositivo esté conectado a Internet.";
 "homescreen_meldung_data_outdated_retry_button" = "Vuelve a intentarlo";
 "inform_code_invalid_title" = "Código inválido";
-"inform_code_invalid_subtitle" = "Si tienes alguna pregunta: comissio.desconfinament.persones@basetis.com";
+"inform_code_invalid_subtitle" = "Si tienes alguna pregunta: tracingapp@basetis.com";
 "date_one_day_ago" = "Hace 1 día";
 "meldung_detail_new_contact_title" = "Nuevo informe";
 "meldung_detail_new_contact_subtitle" = "En esta fecha, una infección también era posible";
@@ -197,7 +197,7 @@
 "meldungen_detail_call_again" = "Llama de nuevo";
 "network_error" = "Por favor, revisa tu conexión a Internet.";
 "unexpected_error_with_retry" = "Se produjo un error inesperado. Vuelve a intentarlo.";
-"invalid_response_auth_code" = "Debido a un error del sistema, tu código de autenticación no se pudo utilizar correctamente. Escribe a: comissio.desconfinament.persones@basetis.com.";
+"invalid_response_auth_code" = "Debido a un error del sistema, tu código de autenticación no se pudo utilizar correctamente. Escribe a: tracingapp@basetis.com.";
 "error_location_permission_title" = "Uso de ubicación rechazado";
 "error_location_permission_button" = "Permitir";
 "accessibility_date" = "Fecha";

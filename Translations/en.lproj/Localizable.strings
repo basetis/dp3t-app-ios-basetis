@@ -318,7 +318,7 @@
 "meldungen_detail_whattodo" = "What should I do?";
 
 /*Meldungen Detail: Weisse Box Titel*/
-"meldungen_detail_call" = "Call us";
+"meldungen_detail_call" = "Contact to: tracingapp@basetis.com";
 
 /*Meldungen Detail Text Weisse Box*/
 "meldungen_detail_call_text" = "Coronavirus infoline (24hrs-a-day)";
@@ -339,7 +339,7 @@
 "meldungen_detail_guard_others" = "Protect other people";
 
 /*Meldungen Detail: Weisse Box Text*/
-"meldungen_detail_guard_text" = "If you have any questions:+34 930 160 320";
+"meldungen_detail_guard_text" = "If you have any questions: tracingapp@basetis.com";
 
 /*Meldungen Detail Button Weisse Box*/
 "meldungen_detail_call_again_button" = "Call again";
@@ -516,7 +516,7 @@
 "inform_code_invalid_title" = "Code invalid";
 
 /*Fehlermeldung Subtitle ungültiger Code*/
-"inform_code_invalid_subtitle" = "If you have any questions: \ncomissio.desconfinament.persones@basetis.com";
+"inform_code_invalid_subtitle" = "If you have any questions: tracingapp@basetis.com";
 
 /*Datum: Vor 1 Tag*/
 "date_one_day_ago" = "1 day ago";
@@ -567,7 +567,7 @@
 "unexpected_error_with_retry" = "An unexpected error has occurred. Please retry.";
 
 /*Fehlermeldung, wenn die Antwort des Authentifizierungs-Services nicht verwertbar ist*/
-"invalid_response_auth_code" = "Owing to a system error, your authentification code could not be used correctly. Please call the hotline.";
+"invalid_response_auth_code" = "Owing to a system error, your authentification code could not be used correctly. Please contact to: tracingapp@basetis.com.";
 
 /*Titel für Fehlermeldung mit Standort*/
 "error_location_permission_title" = "Use of location declined";

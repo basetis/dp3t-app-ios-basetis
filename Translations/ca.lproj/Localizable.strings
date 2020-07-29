@@ -114,14 +114,14 @@
 "date_today" = "Avui";
 "date_days_ago" = "Fa {COUNT} dies ";
 "meldungen_detail_whattodo" = "Que hauria de fer?";
-"meldungen_detail_call" = "Escriu a: comissio.desconfinament.persones@basetis.com";
+"meldungen_detail_call" = "Escriu a: tracingapp@basetis.com";
 "meldungen_detail_call_text" = "Coronavirus infolínia (24 hores al dia)";
 "meldungen_detail_call_button" = "Truca ara";
 "meldungen_detail_explanation_title" = "Ves amb compte!";
 "meldungen_detail_explanation_text1" = "Podries ser un cas contagiós sense adonar-te'n.";
 "meldungen_detail_explanation_text2" = "Podries ser un cas contagiós sense adonar-te'n.";
 "meldungen_detail_guard_others" = "Protegeix a altres persones";
-"meldungen_detail_guard_text" = "Si tens cap pregunta: comissio.desconfinament.persones@basetis.com";
+"meldungen_detail_guard_text" = "Si tens cap pregunta: tracingapp@basetis.com";
 "meldungen_detail_call_again_button" = "Truca un altre cop";
 "meldungen_detail_call_last_call" = "Última trucada: {DATE}";
 "app_subtitle" = "Un pas per davant del virus";
@@ -180,7 +180,7 @@
 "homescreen_meldung_data_outdated_text" = "Fa temps que no és possible sincronitzar els informes. Comprova que el teu dispositiu estigui connectat a Internet.";
 "homescreen_meldung_data_outdated_retry_button" = "Torna-ho a intentar";
 "inform_code_invalid_title" = "Codi no vàlid";
-"inform_code_invalid_subtitle" = "Si tens dubtes: comissio.desconfinament.persones@basetis.com";
+"inform_code_invalid_subtitle" = "Si tens dubtes: tracingapp@basetis.com";
 "date_one_day_ago" = "Fa un dia";
 "meldung_detail_new_contact_title" = "Nou informe";
 "meldung_detail_new_contact_subtitle" = "Per aquesta data, una infecció també podia ser possible";
@@ -197,7 +197,7 @@
 "meldungen_detail_call_again" = "Truca un altre cop";
 "network_error" = "Si us plau, comprova la teva connexió a Internet";
 "unexpected_error_with_retry" = "S'ha produït un error inesperat. Torna-ho a provar.";
-"invalid_response_auth_code" = "A causa d'un error del sistema, no es pot utilitzar correctament el teu codi d'autenticació.\nEscriu a: comissio.desconfinament.persones@basetis.com.";
+"invalid_response_auth_code" = "A causa d'un error del sistema, no es pot utilitzar correctament el teu codi d'autenticació.\nEscriu a: tracingapp@basetis.com.";
 "error_location_permission_title" = "L'ús de la ubicació ha estat rebutjat";
 "error_location_permission_button" = "Permet";
 "accessibility_date" = "Data";
